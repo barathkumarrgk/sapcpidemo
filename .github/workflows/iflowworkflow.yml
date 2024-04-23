@@ -1,0 +1,12 @@
+name: SAP Cloud Integration deploy IFlow Test
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: integrationArtifactDeploy
+        uses: SAP/project-piper-action@main
+        with:
+          step-name: integrationArtifactDeploy
+          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId PurchaseOrderHandlerDemo
