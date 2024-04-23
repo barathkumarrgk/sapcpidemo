@@ -4,32 +4,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: engswee/flashpipe:latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: 'Sync Buyer Integration artifacts'
-        uses: engswee/flashpipe-action/sync@v1
-        with:
-          tmn-host: buyer-integration-vg3ilmhz.it-cpi019.cfapps.us10-002.hana.ondemand.com
-          oauth-host: buyer-integration-vg3ilmhz.authentication.us10.hana.ondemand.com
-          oauth-clientid: ${{ secrets.DEV_CLIENT_ID }}
-          oauth-clientsecret: ${{ secrets.DEV_CLIENT_SECRET }}
-          package-id: AnyERPEnterpriseCustomerIntegration
-          dir-artifacts-relative: integration/AnyErpEnterpriseCustomerIntegration
-          git-commit-msg: Update Buyer Integration package contents
           
       - name: integrationArtifactDeploy
         uses: SAP/project-piper-action@main
         with:
           step-name: integrationArtifactDeploy
-          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId buyer.ingest.template.consumer_copy26March
-      - name: integrationArtifactUnDeploy
-        uses: SAP/project-piper-action@main
-        with:
-          step-name: integrationArtifactUnDeploy
           flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId buyer.ingest.template.consumer_copy26March
       
         
