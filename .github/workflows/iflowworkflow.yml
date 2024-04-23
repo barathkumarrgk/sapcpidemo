@@ -9,4 +9,4 @@ jobs:
         uses: SAP/project-piper-action@main
         with:
           step-name: integrationArtifactDeploy
-          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId PurchaseOrderHandlerDemo
+          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId buyer.ingest.template.consumer_copy26March
