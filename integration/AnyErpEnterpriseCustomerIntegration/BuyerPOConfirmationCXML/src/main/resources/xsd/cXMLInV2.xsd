@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="cXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0"  name="Header">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0"  name="From">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0"  name="Credential" maxOccurs="unbounded"> 
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0"  name="Identity" type="xs:unsignedInt" />
+                        </xs:sequence>
+                        <xs:attribute name="domain" type="xs:string"  />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0"  name="To" >
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0"  name="Credential" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0"  name="Identity" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="domain" type="xs:string"  />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0"  name="Sender">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0"  name="Credential" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0"  name="Identity" type="xs:unsignedInt" />
+                          <xs:element minOccurs="0"  name="SharedSecret" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="domain" type="xs:string"  />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0"  name="UserAgent" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0"  name="Request">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0"  name="ConfirmationRequest">    
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0"  name="ConfirmationHeader">
+                      <xs:complexType>
+                      <xs:sequence>
+                          <xs:element minOccurs="0"  name="DocumentReference">
+                            <xs:complexType>
+                              <xs:attribute name="payloadID" type="xs:string"  />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="confirmID" type="xs:string"  />
+                        <xs:attribute name="operation" type="xs:string"  />
+                        <xs:attribute name="type" type="xs:string"  />
+                        <xs:attribute name="noticeDate" type="xs:string"  />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0"  name="OrderReference">
+                      <xs:complexType>
+                        <xs:attribute name="orderID" type="xs:string"  />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0"  name="ConfirmationItem" maxOccurs="unbounded" >
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0"  name="UnitOfMeasure"/>
+                          <xs:element minOccurs="0"  name="ConfirmationStatus" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0"  name="UnitOfMeasure" maxOccurs="unbounded"/>
+                                <xs:element minOccurs="0"  name="ItemIn" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element minOccurs="0"  name="ItemDetail" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element minOccurs="0"  name="UnitPrice">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element minOccurs="0"  name="Money"/>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element minOccurs="0"  name="Description" >
+                                              <xs:complexType>
+                                                <xs:attribute name="lang" type="xs:string"  />
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element minOccurs="0"  name="UnitOfMeasure"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="quantity" type="xs:string"  />
+                                    <xs:attribute name="lineNumber" type="xs:string"  />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element minOccurs="0"  name="Comments" >
+                                  <xs:complexType>
+                                    <xs:attribute name="lang" type="xs:string"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="quantity" type="xs:string"  />
+                              <xs:attribute name="type" type="xs:string"  />
+                              <xs:attribute name="deliveryDate" type="xs:string"  />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="quantity" type="xs:string"  />
+                        <xs:attribute name="lineNumber" type="xs:string"  />
+                      </xs:complexType>
+                    </xs:element>
+                    
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="deploymentMode" type="xs:string"  />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string"  />
+      <xs:attribute name="payloadID" type="xs:string"  />
+      <xs:attribute name="timestamp" type="xs:string"  />
+      <xs:attribute name="lang" type="xs:string"  />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

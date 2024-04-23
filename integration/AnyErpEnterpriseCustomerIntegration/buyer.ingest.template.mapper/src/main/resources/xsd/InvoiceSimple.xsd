@@ -1,0 +1,97 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="csv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="headers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="erpId" />
+              <xs:element type="xs:string" name="wfId" />
+              <xs:element type="xs:string" name="poNumber" />
+              <xs:element type="xs:string" name="number" />
+              <xs:element type="xs:string" name="supplierNumber" />
+              <xs:element type="xs:string" name="businessUnit" />
+              <xs:element type="xs:string" name="invoiceDate" />
+              <xs:element type="xs:string" name="dueDate" />
+              <xs:element type="xs:string" name="invoiceIndicator" />
+              <xs:element type="xs:string" name="grossAmount" />
+              <xs:element type="xs:string" name="invoiceDiscountBaseAmount" />
+              <xs:element type="xs:string" name="status" />
+              <xs:element type="xs:string" name="currency" />
+              <xs:element type="xs:string" name="postingDate" />
+              <xs:element type="xs:string" name="receivingDate" />
+              <xs:element type="xs:string" name="deliverDate" />
+              <xs:element type="xs:string" name="statusLastUpdated" />
+              <xs:element type="xs:string" name="erpStatusExplanation" />
+              <xs:element type="xs:string" name="otherCurrency" />
+              <xs:element type="xs:string" name="otherCurrencyExchangeRate" />
+              <xs:element type="xs:string" name="deliveryNote" />
+              <xs:element type="xs:string" name="referenceNumber" />
+              <xs:element type="xs:string" name="netAmount" />
+              <xs:element type="xs:string" name="totalAddlChargesAmount" />
+              <xs:element type="xs:string" name="totalTaxAmount" />
+              <xs:element type="xs:string" name="totalDiscountAmount" />
+              <xs:element type="xs:string" name="comment" />
+              <xs:element type="xs:string" name="partialPayment" />
+              <xs:element type="xs:string" name="paymentTermsDays1" />
+              <xs:element type="xs:string" name="paymentTermsDays2" />
+              <xs:element type="xs:string" name="paymentTermsDaysNet" />
+              <xs:element type="xs:string" name="paymentTermsDescription" />
+              <xs:element type="xs:string" name="paymentTermsPercent1" />
+              <xs:element type="xs:string" name="paymentTermsPercent2" />
+              <xs:element type="xs:string" name="paymentTermsId" />
+              <xs:element type="xs:string" name="epEligible" />
+              <xs:element type="xs:string" name="ddFlag" />
+              <xs:element type="xs:string" name="financeType" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="line" maxOccurs="unbounded" minOcurrs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="erpId" />
+              <xs:element type="xs:string" name="wfId" />
+              <xs:element type="xs:string" name="poNumber" />
+              <xs:element type="xs:string" name="number" />
+              <xs:element type="xs:string" name="supplierNumber" />
+              <xs:element type="xs:string" name="businessUnit" />
+              <xs:element type="xs:string" name="invoiceDate" />
+              <xs:element type="xs:string" name="dueDate" />
+              <xs:element type="xs:string" name="invoiceIndicator" />
+              <xs:element type="xs:string" name="grossAmount" />
+              <xs:element type="xs:string" name="invoiceDiscountBaseAmount" />
+              <xs:element type="xs:string" name="status" />
+              <xs:element type="xs:string" name="currency" />
+              <xs:element type="xs:string" name="postingDate" />
+              <xs:element type="xs:string" name="receivingDate" />
+              <xs:element type="xs:string" name="deliverDate" />
+              <xs:element type="xs:string" name="statusLastUpdated" />
+              <xs:element type="xs:string" name="erpStatusExplanation" />
+              <xs:element type="xs:string" name="otherCurrency" />
+              <xs:element type="xs:string" name="otherCurrencyExchangeRate" />
+              <xs:element type="xs:string" name="deliveryNote" />
+              <xs:element type="xs:string" name="referenceNumber" />
+              <xs:element type="xs:string" name="netAmount" />
+              <xs:element type="xs:string" name="totalAddlChargesAmount" />
+              <xs:element type="xs:string" name="totalTaxAmount" />
+              <xs:element type="xs:string" name="totalDiscountAmount" />
+              <xs:element type="xs:string" name="comment" />
+              <xs:element type="xs:string" name="partialPayment" />
+              <xs:element type="xs:string" name="paymentTermsDays1" />
+              <xs:element type="xs:string" name="paymentTermsDays2" />
+              <xs:element type="xs:string" name="paymentTermsDaysNet" />
+              <xs:element type="xs:string" name="paymentTermsDescription" />
+              <xs:element type="xs:string" name="paymentTermsPercent1" />
+              <xs:element type="xs:string" name="paymentTermsPercent2" />
+              <xs:element type="xs:string" name="paymentTermsId" />
+              <xs:element type="xs:string" name="epEligible" />
+              <xs:element type="xs:string" name="ddFlag" />
+              <xs:element type="xs:string" name="financeType" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

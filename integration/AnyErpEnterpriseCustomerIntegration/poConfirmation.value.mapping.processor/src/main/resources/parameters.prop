@@ -1,0 +1,11 @@
+#Tue Apr 23 20:50:16 UTC 2024
+sourceId=TAULIA_CONFIRMATION_ID - SUPPLIER NUMBER - PO NUMBER
+sourceAgency=sourceKC
+apiCredential=KC-Buyer-VM
+API_URL=https\://buyer-integration-vg3ilmhz.it-cpi019.cfapps.us10-002.hana.ondemand.com/api/v1
+targetId=lastUpdatedOn
+targetAgency=targetKC
+artifactId=buyer.po.confirm.lookup.table
+process_direct_url=/kc_value_mapping_processor
+targetValueName=testForAPIV
+sourceValueName=testForAPI

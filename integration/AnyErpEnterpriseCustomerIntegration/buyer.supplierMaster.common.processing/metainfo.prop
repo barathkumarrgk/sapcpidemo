@@ -1,0 +1,3 @@
+#Store metainfo properties
+#Tue Apr 23 20:50:16 UTC 2024
+description=[COMMON] Splits and converts common supplier master XML file to JSON in the same format as /v1/supplierMaster endpoint on extapi-buyer-integration

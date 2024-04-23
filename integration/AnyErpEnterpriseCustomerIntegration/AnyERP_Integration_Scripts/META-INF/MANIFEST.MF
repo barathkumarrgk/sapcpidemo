@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: AnyERP_Integration_Scripts
+Bundle-ManifestVersion: 2
+Origin-Bundle-SymbolicName: AnyERP_Integration_Scripts
+Origin-Bundle-Version: 1.0.133
+Import-Package: org.osgi.framework
+Origin-Bundle-Name: AnyERP Integration Scripts
+Provide-Capability: scriptcollection.AnyERP_Integration_Scripts;version:
+ Version="1.0.154"
+Bundle-Name: AnyERP Integration Scripts
+Bundle-Version: 1.0.154
+SAP-NodeType: IFLMAP
+Origin-ModifiedDate: 1705514795879
+SAP-BundleType: ScriptCollection
+Import-Service: 
+

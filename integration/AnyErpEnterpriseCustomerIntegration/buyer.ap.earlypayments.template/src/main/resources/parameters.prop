@@ -1,0 +1,14 @@
+#Tue Apr 23 20:50:11 UTC 2024
+buyerName=
+pgpUserId=changeMeForPgp
+userId=
+buyerCompanyId=
+zipping=false
+sftpPathDirectory=/customerFolder/outPath
+fileExtension=.csv
+erpClientId=
+financeType=SCF/DD/AR
+EPFilenamePrefix=EPR_OUT_
+pgp=false
+financeVersion=V1/V2/V3
+splitCSVByEP=false

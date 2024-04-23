@@ -1,0 +1,21 @@
+#Tue Apr 23 20:50:11 UTC 2024
+sourceId=TAULIA_CONFIRMATION_ID - SUPPLIER NUMBER - PO NUMBER
+sourceid=TAULIA_CONFIRMATION_ID - SUPPLIER NUMBER - PO NUMBER
+artifactPackageId=KCPOConf
+API_URL=https\://buyer-integration-vg3ilmhz.it-cpi019.cfapps.us10-002.hana.ondemand.com/api/v1
+AWSArchiveflow=com_buyer_file_archive
+targetId=lastUpdatedOn
+targetAgency=targetKC
+subject=PO Confirmation Report error
+finOpsEmail=christine.yip2@taulia.com
+toEmailNotification=christine.yip2@taulia.com
+sourceValueName=testForAPI
+sourceAgency=sourceKC
+apiCredential=KC-Buyer-VM
+fromEmailNotification=do-not-reply@connect.taulia.com
+customerType=KC
+Timer=<row><cell>dayValue</cell><cell></cell></row><row><cell>monthValue</cell><cell></cell></row><row><cell>yearValue</cell><cell></cell></row><row><cell>dateType</cell><cell>DAILY</cell></row><row><cell>hourValue</cell><cell>23</cell></row><row><cell>minutesValue</cell><cell>30</cell></row><row><cell>timeType</cell><cell>ON_TIME</cell></row><row><cell>timeZone</cell><cell>( UTC 0\:00 ) Greenwich Mean Time(Etc/GMT)</cell></row><row><cell>throwExceptionOnExpiry</cell><cell>true</cell></row><row><cell>second</cell><cell>*</cell></row><row><cell>minute</cell><cell>*</cell></row><row><cell>hour</cell><cell>*</cell></row><row><cell>day_of_month</cell><cell>?</cell></row><row><cell>month</cell><cell>*</cell></row><row><cell>dayOfWeek</cell><cell>*</cell></row><row><cell>year</cell><cell>*</cell></row><row><cell>triggerType</cell><cell>cron</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>0+30+23+?+*+*+*&amp;trigger.timeZone\=Etc/GMT</cell></row>
+artifactId=KCPOConfirmationValueMapping
+artifactDescription=KCPOConfirmationValueMapping
+process_direct_url=/kc_value_mapping_processor
+targetValueName=testForAPIV

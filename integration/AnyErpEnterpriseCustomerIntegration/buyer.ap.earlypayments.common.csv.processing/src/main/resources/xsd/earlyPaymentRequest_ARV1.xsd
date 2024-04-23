@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="earlyPayments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="earlyPayment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="autoRequested" type="xs:boolean" />
+              <xs:element name="creator" type="xs:string" />
+              <xs:element name="businessUnit" type="xs:string" />
+              <xs:element name="invoiceErpId" type="xs:string" />
+              <xs:element name="supplierNumber" type="xs:string" />
+              <xs:element name="supplierSite" type="xs:string" />
+              <xs:element name="status" type="xs:string" />
+              <xs:element name="transactionid" type="xs:string" />
+              <xs:element name="platformSignature" type="xs:string" />
+              <xs:element name="supplierBankName" type="xs:string" />
+              <xs:element name="supplierBankBranchNumber" type="xs:string" />
+              <xs:element name="supplierBankCity" type="xs:string" />
+              <xs:element name="supplierBankRegion" type="xs:string" />
+              <xs:element name="supplierBankStreet" type="xs:string" />
+              <xs:element name="supplierBankCountry" type="xs:string" />
+              <xs:element name="supplierBankaccountNumber" type="xs:string" />
+              <xs:element name="supplierBankNumber" type="xs:string" />
+              <xs:element name="supplierBankControlKey" type="xs:string" />
+              <xs:element name="supplierBankSwiftNumber" type="xs:string" />
+              <xs:element name="supplierBankIban" type="xs:string" />
+              <xs:element name="financeDate" type="xs:date" />
+              <xs:element name="financeType" type="xs:string" />
+              <xs:element name="type" type="xs:string" />
+              <xs:element name="originalMaturityDate" type="xs:dateTime" />
+              <xs:element name="erpInvId" type="xs:string" />
+              <xs:element name="discountPercent" type="xs:decimal" />
+              <xs:element name="amount" type="xs:decimal" />
+              <xs:element name="balanceResult" type="xs:decimal" />
+	      <xs:element name="invoiceId" type="xs:string" />
+              <xs:element name="paymentAmount" type="xs:decimal" />
+              <xs:element name="discountAmount" type="xs:decimal" />
+              <xs:element name="erpBankId" type="xs:string" />
+              <xs:element name="erpBankHash" type="xs:string" />
+              <xs:element name="sequence" type="xs:unsignedInt" />
+              <xs:element name="stop" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
