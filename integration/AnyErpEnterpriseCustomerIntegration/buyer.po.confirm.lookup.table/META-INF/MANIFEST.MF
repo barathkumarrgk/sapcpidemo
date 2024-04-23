@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: buyer.po.confirm.lookup.table
+Bundle-ManifestVersion: 2
+Origin-Bundle-SymbolicName: buyer.po.confirm.lookup.table
+Origin-Bundle-Version: 1.0.0
+Import-Package: com.sap.xi.mapping.camel.valmap
+Origin-Bundle-Name: KCPOConfirmationValueMapping
+Bundle-Name: KCPOConfirmationValueMapping
+Bundle-Version: 1.0.1
+Bundle-Activator: com.sap.xi.mapping.camel.valmap.ValueMappingActivato
+ r
+SAP-NodeType: IFLMAP
+Origin-ModifiedDate: 1700607863876
+SAP-BundleType: ValueMapping
+Import-Service: 
+

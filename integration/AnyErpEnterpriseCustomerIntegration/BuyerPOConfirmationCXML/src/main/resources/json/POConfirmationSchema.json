@@ -1,0 +1,229 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Test",
+    "version": "1.0.0",
+    "title": "EBI",
+    "termsOfService": "http://localhost#/terms-of-use",
+    "contact": {
+      "name": "CH",
+      "email": "hi@nothing.com"
+    },
+    "license": {
+      "name": "License of API"
+    }
+  },
+  "host": "localhost",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Invoice",
+      "description": "Invoice"
+    }
+  ],
+  "paths": {
+    "/purchaseOrder/confirmation/id": {
+      "get": {
+        "tags": ["Purchase Order"],
+        "summary": "PO confirmation",
+        "description": "po confirmation by id",
+        "operationId": "POConfirmationId",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "schema": {
+              "$ref": "#/definitions/POConfirmation"
+            },
+            "in": "body",
+            "name": "PO Confirmation",
+            "description": "POConfirmation",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "POConfirmation": {
+      "properties": {
+        "id": {
+        "type": "string"
+        },
+        "confirmationNumber": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "erpDeliveryStatus": {
+            "type": "string"
+        },
+        "note": {
+            "type": "string"
+        },
+        "customer": {
+            "$ref": "#/definitions/customer"
+        },
+        "supplier": {
+            "$ref": "#/definitions/supplier"
+        },
+        "purchaseOrder": {
+            "$ref": "#/definitions/purchaseOrder"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/definitions/item"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "customer":{
+        "properties": {
+            "businessUnit": {
+                "type": "string"
+            }
+        },
+        "type": "object"
+    },
+    "supplier":{
+        "properties": {
+            "vendorNumber": {
+                "type": "string"
+            }
+        },
+        "type": "object"
+    },
+    "purchaseOrder":{
+        "properties": {
+            "id": {
+                "type": "string"
+            },
+            "documentId": {
+                "type": "string"
+            },
+            "number": {
+                "type": "string"
+            },
+            "customFields": {
+                "items": {
+                    "$ref": "#/definitions/customField"
+                },
+                "type":"array"
+            }
+        },
+        "type": "object"
+    },
+    "item":{
+        "properties": {
+            "poItemNumber": {
+                "type": "integer"
+            },
+            "unitPrice": {
+                "type": "number"
+            },
+            "unitOfMeasure": {
+                "type": "string"
+            },
+            "materialCodeSupplier": {
+                "type": "string"
+            },
+            "materialCodeBuyer": {
+                "type": "string"
+            },
+            "materialDescription": {
+                "type": "string"
+            },
+            "type": {
+                "type": "string"
+            },
+            "note": {
+                "type": "string"
+            },
+            "orderedUnitPrice": {
+                "type": "string"
+            },
+            "orderedUnitOfMeasure": {
+                "type": "string"
+            },
+            "orderedMaterialCodeSupplier": {
+                "type": "string"
+            },
+            "orderedMaterialCodeBuyer": {
+                "type": "string"
+            },
+            "orderedMaterialDescription": {
+                "type": "string"
+            },
+            "orderedSchedules": {
+                "items": {
+                    "$ref": "#/definitions/orderedSchedule"
+                },
+                "type": "array"
+            },
+            "schedules": {
+                "items": {
+                    "$ref": "#/definitions/schedule"
+                },
+                "type": "array"
+            },
+            "customFields": {
+                "items": {
+                    "$ref": "#/definitions/customField"
+                },
+                "type": "array"
+            }
+        },
+        "type": "object"
+    },
+    "orderedSchedule": {
+        "properties": {
+            "deliveryDate": {
+                "type": "string"
+            },
+            "quantity": {
+                "type": "integer"
+            }
+        },
+        "type":"object"
+    },
+    "schedule": {
+        "properties": {
+            "deliveryDate": {
+                "type": "string"
+            },
+            "quantity": {
+                "type": "integer"
+            },
+            "type": {
+                "type": "string"
+            },
+            "deliveryDateNote": {
+                "type": "string"
+            }
+        },
+        "type":"object"
+    },
+    "customField": {
+        "properties": {
+            "fieldName": {
+                "type": "string"
+            },
+            "fieldValue": {
+                "type": "string"
+            },
+            "showInUi": {
+                "type": "boolean"
+            }
+        },
+        "type":"object"
+    },
+    "x-components": {}
+  }
+}

@@ -1,0 +1,77 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="csv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="headers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="erpTimestamp" />
+              <xs:element type="xs:string" name="customerNumber" />
+              <xs:element type="xs:string" name="name" />
+              <xs:element type="xs:string" name="vendorNumber" />
+              <xs:element type="xs:string" name="businessUnit" />
+              <xs:element type="xs:string" name="customFieldName" />
+              <xs:element type="xs:string" name="customFieldValue" />
+              <xs:element type="xs:string" name="customFieldShowInUi" />
+              <xs:element type="xs:string" name="addressLine1" />
+              <xs:element type="xs:string" name="addressLine2" />
+              <xs:element type="xs:string" name="addressLine3" />
+              <xs:element type="xs:string" name="city" />
+              <xs:element type="xs:string" name="country" />
+              <xs:element type="xs:string" name="email" />
+              <xs:element type="xs:string" name="fax" />
+              <xs:element type="xs:string" name="language" />
+              <xs:element type="xs:string" name="addressName" />
+              <xs:element type="xs:string" name="phone" />
+              <xs:element type="xs:string" name="poBox" />
+              <xs:element type="xs:string" name="poBoxCity" />
+              <xs:element type="xs:string" name="poBoxPostalCode" />
+              <xs:element type="xs:string" name="postalCode" />
+              <xs:element type="xs:string" name="region" />
+              <xs:element type="xs:string" name="distributionChannel" />
+              <xs:element type="xs:string" name="division" />
+              <xs:element type="xs:string" name="group" />
+              <xs:element type="xs:string" name="office" />
+              <xs:element type="xs:string" name="organization" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="line" maxOccurs="unbounded" minOcurrs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="erpTimestamp" />
+              <xs:element type="xs:string" name="customerNumber" />
+              <xs:element type="xs:string" name="name" />
+              <xs:element type="xs:string" name="vendorNumber" />
+              <xs:element type="xs:string" name="businessUnit" />
+              <xs:element type="xs:string" name="customFieldName" />
+              <xs:element type="xs:string" name="customFieldValue" />
+              <xs:element type="xs:string" name="customFieldShowInUi" />
+              <xs:element type="xs:string" name="addressLine1" />
+              <xs:element type="xs:string" name="addressLine2" />
+              <xs:element type="xs:string" name="addressLine3" />
+              <xs:element type="xs:string" name="city" />
+              <xs:element type="xs:string" name="country" />
+              <xs:element type="xs:string" name="email" />
+              <xs:element type="xs:string" name="fax" />
+              <xs:element type="xs:string" name="language" />
+              <xs:element type="xs:string" name="addressName" />
+              <xs:element type="xs:string" name="phone" />
+              <xs:element type="xs:string" name="poBox" />
+              <xs:element type="xs:string" name="poBoxCity" />
+              <xs:element type="xs:string" name="poBoxPostalCode" />
+              <xs:element type="xs:string" name="postalCode" />
+              <xs:element type="xs:string" name="region" />
+              <xs:element type="xs:string" name="distributionChannel" />
+              <xs:element type="xs:string" name="division" />
+              <xs:element type="xs:string" name="group" />
+              <xs:element type="xs:string" name="office" />
+              <xs:element type="xs:string" name="organization" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root" type="rootType" />
+  <xs:complexType name="rootType">
+    <xs:sequence>
+      <xs:element name="businessUnit" type="businessUnitType" maxOccurs="unbounded" minOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="businessUnitType">
+    <xs:sequence>
+      <xs:element type="addressType" name="address" minOccurs="0" />
+      <xs:element type="xs:string" name="currency" minOccurs="0" />
+      <xs:element type="xs:string" name="name" minOccurs="0" />
+      <xs:element type="xs:string" name="number" minOccurs="0" />
+      <xs:element type="xs:string" name="payingNumber" minOccurs="0" />
+      <xs:element type="xs:string" name="taxId" minOccurs="0" />
+      <xs:element type="xs:string" name="ticketDocumentIdParts" maxOccurs="unbounded" minOccurs="0" />
+      <xs:element type="xs:string" name="businessUnitSuffix" minOccurs="0" />
+      <xs:element type="xs:string" name="businessUnitsSuffixed" maxOccurs="unbounded" minOccurs="0" />
+      <xs:element type="xs:string" name="ticketDocumentId" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addressType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="city" minOccurs="0" />
+      <xs:element type="xs:string" name="country" minOccurs="0" />
+      <xs:element type="xs:string" name="email" minOccurs="0" />
+      <xs:element type="xs:string" name="erpTimeZone" minOccurs="0" />
+      <xs:element type="xs:string" name="fax" minOccurs="0" />
+      <xs:element type="xs:string" name="language" minOccurs="0" />
+      <xs:element type="xs:string" name="name" minOccurs="0" />
+      <xs:element type="xs:string" name="phone" minOccurs="0" />
+      <xs:element type="xs:string" name="poBox" minOccurs="0" />
+      <xs:element type="xs:string" name="poBoxCity" minOccurs="0" />
+      <xs:element type="xs:string" name="poBoxPostalCode" minOccurs="0" />
+      <xs:element type="xs:string" name="postalCode" minOccurs="0" />
+      <xs:element type="xs:string" name="region" minOccurs="0" />
+      <xs:element type="xs:string" name="street" minOccurs="0" />
+      <xs:element type="xs:string" name="street2" minOccurs="0" />
+      <xs:element type="xs:string" name="street3" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root" type="rootType" />
+  <xs:complexType name="rootType">
+    <xs:sequence>
+      <xs:element name="earlyPaymentsAck" type="earlyPaymentsAckType" maxOccurs="unbounded" minOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="earlyPaymentsAckType">
+    <xs:sequence>
+      <xs:element type="bankAccountsType" name="bankAccounts" maxOccurs="unbounded" minOccurs="0" />
+      <xs:element type="xs:string" name="erpDocumentId" minOccurs="0" />
+      <xs:element type="xs:string" name="errorCode" minOccurs="0" />
+      <xs:element type="xs:string" name="funderStatus" minOccurs="0" />
+      <xs:element type="xs:string" name="id" minOccurs="0" />
+      <xs:element type="xs:string" name="platformSignature" minOccurs="0" />
+      <xs:element type="xs:string" name="rejectReason" minOccurs="0" />
+      <xs:element type="xs:string" name="status" minOccurs="0" />
+      <xs:element type="xs:string" name="transactionId" minOccurs="0" />
+      <xs:element type="xs:string" name="invoiceId" minOccurs="0" />
+      <xs:element type="xs:string" name="ticketDocumentId" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bankAccountsType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="accountNumber" minOccurs="0" />
+      <xs:element type="xs:string" name="bankNumber" minOccurs="0" />
+      <xs:element type="xs:string" name="bankBranchNumber" minOccurs="0" />
+      <xs:element type="xs:string" name="bankName" minOccurs="0" />
+      <xs:element type="xs:string" name="bankCity" minOccurs="0" />
+      <xs:element type="xs:string" name="bankRegion" minOccurs="0" />
+      <xs:element type="xs:string" name="bankStreet" minOccurs="0" />
+      <xs:element type="xs:string" name="country" minOccurs="0" />
+      <xs:element type="xs:string" name="currency" minOccurs="0" />
+      <xs:element type="xs:string" name="externalAccountHolder" minOccurs="0" />
+      <xs:element type="xs:string" name="externalAccountHolderId" minOccurs="0" />
+      <xs:element type="xs:string" name="swiftNumber" minOccurs="0" />
+      <xs:element type="xs:string" name="ibanNumber" minOccurs="0" />
+      <xs:element type="xs:string" name="controlKey" minOccurs="0" />
+      <xs:element type="integrityType" name="integrity" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="integrityType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="entityFingerprint" minOccurs="0" />
+      <xs:element type="xs:string" name="localScheme" minOccurs="0" />
+      <xs:element type="xs:string" name="signature" minOccurs="0" />
+      <xs:element type="xs:string" name="signatureVersion" minOccurs="0" />
+      <xs:element type="xs:string" name="timestamp" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

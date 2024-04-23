@@ -1,0 +1,53 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="csv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="line">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="erpTimestamp" />
+              <xs:element type="xs:string" name="businessUnit" />
+              <xs:element type="xs:string" name="customerNumber" />
+              <xs:element type="xs:string" name="comment" />
+              <xs:element type="xs:string" name="creditIndicator" />
+              <xs:element type="xs:string" name="currency" />
+              <xs:element type="xs:string" name="customFieldName" />
+              <xs:element type="xs:string" name="customFieldValue" />
+              <xs:element type="xs:string" name="discountAmount" />
+              <xs:element type="xs:string" name="discountBaseAmount" />
+              <xs:element type="xs:string" name="dueDate" />
+              <xs:element type="xs:string" name="erpUniqueId" />
+              <xs:element type="xs:string" name="grossAmount" />
+              <xs:element type="xs:string" name="invoiceDate" />
+              <xs:element type="xs:string" name="invoiceNumber" />
+              <xs:element type="xs:string" name="netAmount" />
+              <xs:element type="xs:string" name="paymentAmount" />
+              <xs:element type="xs:string" name="postingDate" />
+              <xs:element type="xs:string" name="referenceNumber" />
+              <xs:element type="xs:string" name="status" />
+              <xs:element type="xs:string" name="lineNumber" />
+              <xs:element type="xs:string" name="customFieldNameLine" />
+              <xs:element type="xs:string" name="customFieldValueLine" />
+              <xs:element type="xs:string" name="payerName" />
+              <xs:element type="xs:string" name="itemNumber" />
+              <xs:element type="xs:string" name="lineNetAmount" />
+              <xs:element type="xs:string" name="taxAmount" />
+              <xs:element type="xs:string" name="taxRate" />
+              <xs:element type="xs:string" name="lineGrossAmount" />
+              <xs:element type="xs:string" name="billingDocumentNumber" />
+              <xs:element type="xs:string" name="salesDocumentType" />
+              <xs:element type="xs:string" name="salesDocumentNumber" />
+              <xs:element type="xs:string" name="salesDocumentLineItemNumber" />
+              <xs:element type="xs:string" name="distributionChannel" />
+              <xs:element type="xs:string" name="division" />
+              <xs:element type="xs:string" name="group" />
+              <xs:element type="xs:string" name="office" />
+              <xs:element type="xs:string" name="organization" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

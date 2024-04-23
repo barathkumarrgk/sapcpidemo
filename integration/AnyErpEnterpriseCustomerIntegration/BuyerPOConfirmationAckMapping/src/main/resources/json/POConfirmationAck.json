@@ -1,0 +1,80 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Test",
+        "version": "1.0.0",
+        "title": "EBI",
+        "termsOfService": "http://localhost#/terms-of-use",
+        "contact": {
+            "name": "CH",
+            "email": "hi@nothing.com"
+        },
+        "license": {
+            "name": "License of API"
+        }
+    },
+    "host": "localhost",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "PO Confirmation Ack",
+            "description": "PO Confirmation"
+        }
+    ],
+    "paths": {
+        "/purchaseOrder/confirmation": {
+            "post": {
+                "tags": [
+                    "Purchase Order"
+                ],
+                "summary": "PO confirmation ack",
+                "description": "po confirmation ack",
+                "operationId": "POConfirmationAck",
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "schema": {
+                            "$ref": "#/definitions/POConfirmationAck"
+                        },
+                        "in": "body",
+                        "name": "PO Confirmation ack",
+                        "description": "POConfirmation ack",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "POConfirmationAck": {
+            "properties": {
+                "items": {
+                    "items": {
+                        "$ref": "#/definitions/acknowledge"
+                      },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "acknowledge": {
+            "properties": {
+                "confirmationId": {
+                    "type": "string"
+                },
+                "confirmationStatus": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "x-components": {}
+    }
+}

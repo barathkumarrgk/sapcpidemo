@@ -1,0 +1,3 @@
+#Store metainfo properties
+#Tue Apr 23 20:55:44 UTC 2024
+description=Standard Integration Flow to take in XML file format and converts it into a JSON on queue

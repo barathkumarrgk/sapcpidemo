@@ -1,0 +1,3 @@
+#Store metainfo properties
+#Tue Apr 23 20:55:43 UTC 2024
+description=Splits XML file into groups of 1000 and converts to JSON in the same format as businessUnits API endpoint in EBI

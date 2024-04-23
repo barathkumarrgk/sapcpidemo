@@ -1,0 +1,5 @@
+#
+#Tue Apr 23 20:55:44 UTC 2024
+ToDefaultJMSQueue=com_out_invoices
+ToJMSQueue=aldi_out_invoices
+ToBuyer=
