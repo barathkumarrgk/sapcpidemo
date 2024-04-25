@@ -9,4 +9,4 @@ jobs:
       - uses: vimtor/action-zip@v1.2
         with:
           files: integration/AnyErpEnterpriseCustomerIntegration
-          dest: ${{ github.workspace }}/result.zip
+          path: ${{ github.workspace }}/result.zip
