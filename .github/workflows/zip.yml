@@ -9,4 +9,4 @@ jobs:
       - uses: vimtor/action-zip@v1.2
         with:
           files: integration/AnyErpEnterpriseCustomerIntegration
-          dest: result.zip
+          dest: integration/AnyErpEnterpriseCustomerIntegration/result.zip
