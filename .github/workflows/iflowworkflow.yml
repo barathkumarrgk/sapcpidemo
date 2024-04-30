@@ -17,7 +17,7 @@ jobs:
         with:
           step-name: integrationArtifactDeploy
           LEVEL: ${{ inputs.logLevel }}
-          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId ${{ inputs.flowname }}
+          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId ${{ github.event.inputs.tags }}
 
       - name: integrationArtifactDownload
         uses: SAP/project-piper-action@main
