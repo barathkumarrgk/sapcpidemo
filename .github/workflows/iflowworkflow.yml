@@ -25,4 +25,4 @@ jobs:
         uses: SAP/project-piper-action@main
         with:
           step-name: integrationArtifactDownload
-          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId buyer.ingest.template.consumer_copy26March --integrationFlowVersion 1.2.61 --downloadPath ./iflows
+          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId buyer.ingest.template.consumer_copy26March --integrationFlowVersion 1.2.61 --downloadPath
