@@ -26,7 +26,7 @@ jobs:
         with:
           step-name: integrationArtifactDownload
       
-          cpiApiServiceKeyCredentialsId: ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }}
+          cpiApiServiceKeyCredentialsId: apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }}
           integrationFlowId: integrationFlowId buyer.ingest.template.consumer_copy26March
           integrationFlowVersion: 1.2.61
           downloadPath: integration/AnyErpEnterpriseCustomerIntegration
