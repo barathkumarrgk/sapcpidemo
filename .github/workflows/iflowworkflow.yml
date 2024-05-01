@@ -10,8 +10,11 @@ on:
         description: 'Test scenario tags'
 jobs:
   build:
-    runs-on: self-hosted
-    steps:
+     runs-on:
+        - self-hosted
+        - 2cpu-2g
+     timeout-minutes: 60
+     steps:
       - name: integrationArtifactDeploy
         uses: SAP/project-piper-action@main
         with:
@@ -24,3 +27,4 @@ jobs:
         with:
           step-name: integrationArtifactDownload
           flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId buyer.ingest.template.consumer_copy26March --integrationFlowVersion 1.2.61 --downloadPath buyer.ingest.template.consumer_copy26March.zip
+
