@@ -12,7 +12,6 @@ jobs:
   build:
      runs-on:
         - self-hosted
-        - 2cpu-2g
      timeout-minutes: 60
      steps:
       - name: integrationArtifactDeploy
