@@ -10,7 +10,7 @@ on:
         description: 'Test scenario tags'
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: integrationArtifactDeploy
         uses: SAP/project-piper-action@main
