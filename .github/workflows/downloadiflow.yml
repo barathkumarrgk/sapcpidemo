@@ -1,0 +1,14 @@
+name: SAP Cloud Integration deploy IFlow Test
+on: 
+  workflow_dispatch:
+jobs:
+  build:
+     runs-on:
+        - ubuntu-latest
+     timeout-minutes: 60
+     steps:
+      - name: integrationArtifactDownload
+        uses: SAP/project-piper-action@main
+        with:
+          step-name: integrationArtifactDownload
+          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId buyer.ingest.template.consumer_copy26March --integrationFlowVersion 1.2.61 --downloadPath IntegrationFlows/Zip
