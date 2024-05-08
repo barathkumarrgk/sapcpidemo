@@ -1,4 +1,4 @@
-name: SAP Cloud Integration deploy IFlow Test
+name: SAP Cloud Integration Download IFlow Test
 on: 
   workflow_dispatch:
 jobs:
