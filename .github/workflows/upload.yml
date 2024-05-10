@@ -11,4 +11,4 @@ jobs:
         uses: SAP/project-piper-action@main
         with:
           step-name: integrationArtifactUpload
-          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId buyer.ingest.template.consumer_copy26March --integrationFlowName buyer.ingest.template.consumer_copy26March --packageId BarathTestPOC  --filePath IntegrationFlows/Zip
+          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId buyer.ingest.template.consumer_copy26March --integrationFlowName buyer.ingest.template.consumer_copy26March --packageId BarathTestPOC  --filePath IntegrationFlows/Zip/buyer.ap.GET.earlypayments.processing.template.zip
