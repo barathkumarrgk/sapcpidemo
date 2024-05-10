@@ -1,0 +1,14 @@
+name: SAP Cloud Integration Upload IFlow Test
+on: 
+  workflow_dispatch:
+jobs:
+  build:
+     runs-on:
+        - ubuntu-latest
+     timeout-minutes: 60
+     steps:
+      - name: integrationArtifactUpload
+        uses: SAP/project-piper-action@main
+        with:
+          step-name: integrationArtifactUpload
+          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId buyer.ingest.template.consumer_copy26March --integrationFlowName buyer.ingest.template.consumer_copy26March --packageId BarathTestPOC  --filePath IntegrationFlows/Zip
