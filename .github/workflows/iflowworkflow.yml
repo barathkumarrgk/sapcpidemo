@@ -2,8 +2,10 @@ name: SAP Cloud Integration deploy IFlow Test
 on: 
   workflow_dispatch:
     inputs:
-      tags:
-        description: 'Test scenario tags'
+      Iflows:
+        description: 'Iflow name'
+      Version:
+        description: 'Version name'
 jobs:
   build:
      runs-on:
@@ -15,10 +17,10 @@ jobs:
         with:
           step-name: integrationArtifactDeploy
           LEVEL: ${{ inputs.logLevel }}
-          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId ${{ github.event.inputs.tags }}
+          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId ${{ github.event.inputs.Iflows }}
 
       - name: integrationArtifactDownload
         uses: SAP/project-piper-action@main
         with:
           step-name: integrationArtifactDownload
-          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId ${{ github.event.inputs.tags }} --integrationFlowVersion 1.2.61 --downloadPath IntegrationFlows/Zip
+          flags: --apiServiceKey ${{ secrets.CPIAPISERVICEKEYCREDENTIALSID }} --integrationFlowId ${{ github.event.inputs.Iflows }} --integrationFlowVersion ${{ github.event.inputs.Version }} --downloadPath IntegrationFlows/Zip
