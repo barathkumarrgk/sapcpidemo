@@ -13,4 +13,4 @@ jobs:
         uses: SAP/project-piper-action@main
         with:
           step-name: integrationArtifactDownload
-          Global Flags:: --customConfig .pipeline/config.yml
+          Global Flags: --customConfig .pipeline/config.yml
