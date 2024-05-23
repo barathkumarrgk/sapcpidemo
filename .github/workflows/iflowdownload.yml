@@ -1,22 +1,16 @@
-name : DownloadIflow
-on:
-  push:
-    branches:
-     - main
-  pull_request:
-    branches:
-      - main
+name: SAP Cloud Integration Download IFlow Test
+on: 
   workflow_dispatch:
-
 jobs:
-  download:
-    runs-on: ubuntu-latest
-    steps:
+  build:
+     runs-on:
+        - ubuntu-latest
+     timeout-minutes: 60
+     steps:
       - name: Checkout
         uses: actions/checkout@v3
-     
-      - name: Project "Piper" Action
-        uses: SAP/project-piper-action@1.0
+      - name: integrationArtifactDownload
+        uses: SAP/project-piper-action@main
         with:
-          command: integrationArtifactDownload
-          Global Flags: --defaultConfig .pipeline/config.yml
+          step-name: integrationArtifactDownload
+          Global Flags:: --customConfig .pipeline/config.yml
