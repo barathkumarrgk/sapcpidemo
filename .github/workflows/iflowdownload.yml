@@ -18,4 +18,5 @@ jobs:
       - name: Project "Piper" Action
         uses: SAP/project-piper-action@1.0
         with:
-          command: integrationArtifactDownload --help
+          command: integrationArtifactDownload
+          Global Flags: --defaultConfig .pipeline/config.yml
