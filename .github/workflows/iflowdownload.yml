@@ -1,0 +1,21 @@
+name : DownloadIflow
+on:
+  push:
+    branches:
+     - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+     
+      - name: Project "Piper" Action
+        uses: SAP/project-piper-action@1.0
+        with:
+          command: integrationArtifactDownload
